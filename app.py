@@ -2,7 +2,7 @@
 import streamlit as st
 import datetime
 
-st.title("📝 みんなの掲示板")
+st.title("📝 再生補修の「保存できない」掲示板")
 
 # セッション内でメッセージ一覧を保持
 if "messages" not in st.session_state:
@@ -14,7 +14,7 @@ message = st.text_area("メッセージ")
 if st.button("投稿する") and name and message:
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     st.session_state.messages.append((now, name, message))
-    st.success("投稿しました！")
+    st.success("投稿しましたが、保存はされません！")
 
 # 表示
 st.subheader("📋 投稿一覧")
