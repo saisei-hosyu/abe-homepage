@@ -2,41 +2,68 @@
 <html>
 <head>
   <title>阿部寛のホームページ風</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      position: relative;
+    }
+
+    .watermark {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 80px;
+      color: rgba(0, 0, 0, 0.05);
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 </head>
-<body bgcolor="white" text="black">
-  <center>
-    <h1>阿部寛風のホームページ</h1>
-        <p>ようこそ。阿部寛風の再生補修のホームページサイトへ。</p>
-    <table border="1" width="600">
-      <tr>
-        <td><a href="profile.html">プロフィール</a></td>
-        <td><a href="works.html">出演作品</a></td>
-        <td><a href="news.html">ニュース</a></td>
-        <td><a href="link.html">リンク</a></td>
-      </tr>
-    </table>
+<body>
+  <div class="watermark">abe hiroshi</div>
 
-    <p>
-      <a href="https://note.com/lush_hosta1028" target="_blank">
-        noteはこちら
-      </a>
-    </p>
-    <p>
-      <a href="https://www.youtube.com/channel/UCOhIqC8TflEP3RvACZ5ZaPg" target="_blank">
-        youtubeはこちら
-      </a>
-    </p>
+  <div class="content">
+    <center>
+      <h1>阿部寛風のホームページ</h1>
+      <p>ようこそ。阿部寛風の再生補修のホームページサイトへ。</p>
 
-    <p>
-      <a href="https://saisei-hosyu-abe-homepage-app-lqlt65.streamlit.app/" target="_blank">
-        掲示板はこちら
-      </a>
-    </p>
+      <table border="1" width="600">
+        <tr>
+          <td><a href="profile.html">プロフィール</a></td>
+          <td><a href="works.html">出演作品</a></td>
+          <td><a href="news.html">ニュース</a></td>
+          <td><a href="link.html">リンク</a></td>
+        </tr>
+      </table>
 
-    <hr>
-    <p>最終更新日：2025年5月16日</p>
-  </center>
+      <p>
+        <a href="https://note.com/lush_hosta1028" target="_blank">
+          noteはこちら
+        </a>
+      </p>
+      <p>
+        <a href="https://www.youtube.com/channel/UCOhIqC8TflEP3RvACZ5ZaPg" target="_blank">
+          youtubeはこちら
+        </a>
+      </p>
+      <p>
+        <a href="https://saisei-hosyu-abe-homepage-app-lqlt65.streamlit.app/" target="_blank">
+          掲示板はこちら
+        </a>
+      </p>
+
+      <hr>
+      <p>最終更新日：2025年5月16日</p>
+    </center>
+  </div>
 </body>
 </html>
-
-
