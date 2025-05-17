@@ -1,23 +1,12 @@
-# app.py
 import streamlit as st
-import datetime
 
-st.title("📝「保存できない」掲示板")
+st.title("🔒 脱出ゲーム")
 
-# セッション内でメッセージ一覧を保持
-if "messages" not in st.session_state:
-    st.session_state.messages = []
+st.write("あなたは暗い部屋に閉じ込められています。扉には番号キーが…")
 
-# 入力フォーム
-name = st.text_input("名前")
-message = st.text_area("メッセージ")
-if st.button("投稿する") and name and message:
-    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
-    st.session_state.messages.append((now, name, message))
-    st.success("投稿しましたが、保存はされません！")
+code = st.text_input("4桁の暗証番号を入力してください")
 
-# 表示
-st.subheader("📋 投稿一覧")
-for time, user, msg in reversed(st.session_state.messages):
-    st.markdown(f"**{user} ({time})**  \n{msg}")
-
+if code == "0420":
+    st.success("カチャ…扉が開いた！脱出成功！")
+elif code:
+    st.error("ブーッ…違う番号だ")
