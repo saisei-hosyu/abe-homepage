@@ -2,7 +2,7 @@
 import streamlit as st
 import datetime
 
-st.title("📝 再生補修の「保存できない」掲示板")
+st.title("📝「保存できない」掲示板")
 
 # セッション内でメッセージ一覧を保持
 if "messages" not in st.session_state:
